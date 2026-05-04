@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Random Forest Classifier</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h1>🌳 Random Forest</h1>
+                <p>Aprendizado com múltiplas árvores</p>
+            </section>
+
+            <section>
+                <h2>🌲 O que é uma floresta?</h2>
+                <div class="image-row">
+                    <img src="img/oqueEFloresta.png" onclick="openModal('img1')">
+                </div>
+
+                <div class="card">
+                    <ul>
+                        <li>Várias árvores de decisão</li>
+                        <li>Cada uma aprende separadamente</li>
+                        <li>Resultado final por votação</li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Aqui é onde entra o conceito principal.
+                    O Random Forest usa várias árvores.
+                    Cada uma aprende de forma independente.
+                    E no final, todas votam para decidir o resultado.
+                </aside>
+            </section>
+
+            <section>
+                <h2>⚙️ Como funciona?</h2>
+                <div class="image-row">
+                    <img src="img/comofunciona.png" onclick="openModal('img2')">
+                </div>
+
+                <div class="card">
+                    <ol>
+                        <li>Bootstrapping</li>
+                        <li>Criação das árvores</li>
+                        <li>Treinamento independente</li>
+                        <li>Votação</li>
+                    </ol>
+                </div>
+
+                <aside class="notes">
+                    O modelo cria vários conjuntos de dados.
+                    Depois constrói várias árvores.
+                    Cada uma aprende sozinha.
+                    E no final todas participam da decisão.
+                </aside>
+            </section>
+
+            <section>
+                <h2>🗳️ Classificação</h2>
+                <div class="image-row">
+                    <img src="img/classificação.png" onclick="openModal('img3')">
+                </div>
+
+                <div class="card">
+                    <ul>
+                        <li>Cada árvore faz uma previsão</li>
+                        <li>As previsões são comparadas</li>
+                        <li>A mais votada vence</li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Quando chega um novo dado,
+                    cada árvore dá um palpite.
+                    Depois o modelo conta os votos.
+                    E a classe mais votada é escolhida.
+                </aside>
+            </section>
+
+            <section>
+                <h2>📊 Importância das Features</h2>
+                <div class="image-row">
+                    <img src="img/importanciafeatures.png" onclick="openModal('img4')">
+                </div>
+
+                <div class="card">
+                    <ul>
+                        <li>Identifica variáveis importantes</li>
+                        <li>Baseado na separação dos dados</li>
+                        <li>Ajuda na interpretação</li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    O modelo também mostra quais variáveis são mais importantes.
+                    Ele analisa quais ajudam mais nas decisões.
+                    Isso ajuda a entender melhor o problema.
+                </aside>
+            </section>
+
+            <section>
+                <h2>✅ Vantagens</h2>
+                <div class="image-row">
+                    <img src="img/vantagem.png" onclick="openModal('img5')">
+                </div>
+
+                <div class="card">
+                    <ul>
+                        <li>Alta precisão</li>
+                        <li>Menos overfitting</li>
+                        <li>Robusto</li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    O Random Forest é muito preciso.
+                    Ele evita overfitting.
+                    E funciona bem com muitos dados.
+                </aside>
+            </section>
+
+            <section>
+                <h2>❌ Desvantagens</h2>
+                <div class="image-row">
+                    <img src="img/desvantagem.png" onclick="openModal('img6')">
+                </div>
+
+                <div class="card">
+                    <ul>
+                        <li>Mais lento</li>
+                        <li>Mais pesado</li>
+                        <li>Difícil de interpretar</li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Apesar de poderoso,
+                    ele pode ser mais lento.
+                    Também usa mais memória.
+                    E é mais difícil de interpretar.
+                </aside>
+            </section>
+
+            <section>
+                <h2>🎤 Resumo</h2>
+                <div class="image-row">
+                    <img src="img/resumo.png" onclick="openModal('img7')">
+                </div>
+
+                <div class="card">
+                    <p>Várias árvores + votação = decisão mais confiável</p>
+                </div>
+
+                <aside class="notes">
+                    Resumindo,
+                    o Random Forest combina várias árvores.
+                    E usa votação para tomar decisões melhores.
+                </aside>
+            </section>
+
+            <section>
+                <h1>Obrigado! 🚀</h1>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- MODAIS -->
+    <div id="img1" class="modal" onclick="closeModal(event)">
+        <img src="img/oqueEFloresta.png">
+    </div>
+
+    <div id="img2" class="modal" onclick="closeModal(event)">
+        <img src="img/comofunciona.png">
+    </div>
+
+    <div id="img3" class="modal" onclick="closeModal(event)">
+        <img src="img/classificação.png">
+    </div>
+
+    <div id="img4" class="modal" onclick="closeModal(event)">
+        <img src="img/importanciafeatures.png">
+    </div>
+
+    <div id="img5" class="modal" onclick="closeModal(event)">
+        <img src="img/vantagem.png">
+    </div>
+
+    <div id="img6" class="modal" onclick="closeModal(event)">
+        <img src="img/desvantagem.png">
+    </div>
+
+    <div id="img7" class="modal" onclick="closeModal(event)">
+        <img src="img/resumo.png">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            slideNumber: true
+        });
+
+        function openModal(id) {
+            document.getElementById(id).classList.add("active");
+            Reveal.configure({ keyboard: false });
+        }
+
+        function closeModal(event) {
+            if (event.target.classList.contains("modal")) {
+                event.target.classList.remove("active");
+                Reveal.configure({ keyboard: true });
+            }
+        }
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                document.querySelectorAll(".modal").forEach(m => m.classList.remove("active"));
+                Reveal.configure({ keyboard: true });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
